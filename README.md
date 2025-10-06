@@ -16,10 +16,19 @@
 ### Запуск проєкту
 
 **Створіть віртуальне середовище**
-
 ```py
 python -m venv venv
 source venv/Scripts/activate
+```
+
+**Встановіть залежності**
+```py
+pip install -r requirements.txt
+```
+
+**Виконайте міграці**
+```py
+python manage.py migrate
 ```
 
 **Запустіть сервер**
@@ -29,9 +38,9 @@ python manage.py runserver
 
 ## 🧑‍💻Автор
 
-Розробник: saywyss
-E-mail: saywysss@gmail.com
-GitHub: **[saywyss](https://github.com/saywyss)**
+Розробник: saywyss  
+E-mail: saywysss@gmail.com  
+GitHub: **[saywyss](https://github.com/saywyss)**  
 
 
 
