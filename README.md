@@ -22,7 +22,16 @@ python -m venv venv
 source venv/Scripts/activate
 ```
 
+**Запустіть сервер**
+```py
+python manage.py runserver
+```
 
+## 🧑‍💻Автор
+
+Розробник: saywyss
+E-mail: saywysss@gmail.com
+GitHub: **[saywyss](https://github.com/saywyss)**
 
 
 
