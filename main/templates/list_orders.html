@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+    <meta charset="UTF-8">
+    <title>Info Page</title>
+    </head>
+
+    <body>
+    { for orders in all orders }
+        <div class="order-card">
+            <h3>{{ order.user }}</h3>
+            <p>Created_at: {{ order.created_at }}</p>
+            <p>Total_Price: {{ order.total_price }}</p>
+        </div>
+    { endfor }
+
+    
+    
+    </body>
+</html>

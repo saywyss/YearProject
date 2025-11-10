@@ -8,10 +8,10 @@ from main.views import ProfileView
 
 urlpatterns = [
     path('', HomeView.as_view(), name='home'),
-    path('', CatalogView.as_view(), name='catalog'),
-    path('', InfoView.as_view(), name='info'),
-    path('', OrderView.as_view(), name='order'),
-    path('', ProfileView.as_view(), name='profile'),
+    path('catalog/', CatalogView.as_view(), name='catalog'),
+    path('info/', InfoView.as_view(), name='info'),
+    path('order/<int:order_id>', OrderView.as_view(), name='order'),
+    path('profile/<int:user_id>', ProfileView.as_view(), name='profile'),
     
 ]
 

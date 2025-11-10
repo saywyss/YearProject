@@ -1,0 +1,14 @@
+<head>
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+
+<main class="container-fluid">
+    <h2>Register an account</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+</main>

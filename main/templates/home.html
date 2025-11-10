@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 
+{% load static %}
+
 <html lang="en">
     <head>
+        <link rel="stylesheet" href="{% static 'base.css' %}">
         <meta charset="UTF-8">
         <title>Home Page</title>
     </head>
     <body>
-        <h1>Home Page</h1>
-        <a href="{% url 'catalog_page' %}">Catalog</a>
-        <a href="{% url 'info_page' %}">Info</a>
-        <a href="{% url 'order_page' %}">Order</a>
-        <a href="{% url 'profile_page' %}">Profile</a>
+
+        <header>
+            <a href="{% url 'login' %}">Login</a>
+            <a href="{% url 'register' %}">Register</a>
+        </header>
+
+        <h1><a href="{% url 'catalog' %}">Каталог</a></h1>
+        <h1>Топ товари</h1>
+        <h1>Спеціальна пропозиція</h1>
+        <h1>По акції</h1>
+
     </body>
 </html>

@@ -9,7 +9,15 @@
 
     <body>
     <h1>Catalog Page</h1>
-    <a href="{% url 'home_page' %}">Home</a>
+    <a href="{% url 'home' %}">Home</a>
+
+    {% for product in all_products %}
+        <div class="product-card">
+            <h3>{{ product.name }}</h3>
+            <p>Price: {{ product.price }}</p>
+        </div>
+    {% endfor %}
+
     </body>
 
 </html>
