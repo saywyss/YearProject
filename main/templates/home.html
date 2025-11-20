@@ -4,21 +4,29 @@
 
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="{% static 'base.css' %}">
         <meta charset="UTF-8">
-        <title>Home Page</title>
+        <title>Головна - TDSHOP</title>
+        <link rel="stylesheet" href="static/base.css">
     </head>
+
+
     <body>
-
-        <header>
-            <a href="{% url 'login' %}">Login</a>
-            <a href="{% url 'register' %}">Register</a>
+        <header class="header">
+            <div class="navbar">
+                <div class="logo"><a href="home.html">TDSHOP</a></div>
+                <nav class="nav-links">
+                <a href="catalog.html">Каталог</a>
+                <a href="list_orders.html">Замовлення</a>
+                <a href="profile.html">Профіль</a>
+                <a href="login.html">В аккаунт</a>
+                <a href="register.html">Реєстрація</a>
+                <a href="info.html">Інформація</a>
+                </nav>
+            </div>
         </header>
-
-        <h1><a href="{% url 'catalog' %}">Каталог</a></h1>
-        <h1>Топ товари</h1>
-        <h1>Спеціальна пропозиція</h1>
-        <h1>По акції</h1>
-
     </body>
+
+    <footer class="footer">
+        © 2025 TDSHOP.
+    </footer>
 </html>
