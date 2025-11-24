@@ -1,15 +1,33 @@
+{% load static %}
+
 <!DOCTYPE html>
 
 <html>
     
     <head>
-    <meta charset="UTF-8">
-    <title>Profile Page</title>
+        <meta charset="UTF-8">
+        <title>Profile Page</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
+        <link rel="stylesheet" href="{% static 'base.css' %}">
     </head>
 
     <body>
-    <h1>Profile Page</h1>
-    <a href="{% url 'home' %}">Home</a>
+        <header class="top-bar">
+            <nav>
+                <div class="logo"><a href="home.html">TDSHOP</a></div>
+
+                <div class ="nav-left">
+                    <a href="catalog.html" class="nav-link">Catalog</a>
+                    <a href="list_orders.html" class="nav-link">Orders</a>
+                    <a href="info.html" class="nav-link">Information</a>
+                </div>
+
+                <div class="nav-right">
+                    <a href="login.html" class="nav-link">Sign in</a>
+                    <a href="register.html" class="nav-link">Create account</a>
+                </div>
+            </nav>
+        </header>
     </body>
 
 </html>

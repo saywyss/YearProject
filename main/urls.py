@@ -7,11 +7,13 @@ from main.views import OrderView
 from main.views import ProfileView
 
 urlpatterns = [
-    path('', HomeView.as_view(), name='home'),
-    path('catalog/', CatalogView.as_view(), name='catalog'),
-    path('info/', InfoView.as_view(), name='info'),
-    path('order/<int:order_id>', OrderView.as_view(), name='order'),
-    path('profile/<int:user_id>', ProfileView.as_view(), name='profile'),
+    path('home.html', HomeView.as_view(), name='home'),
+    path('catalog.html', CatalogView.as_view(), name='catalog'),
+    path('info.html', InfoView.as_view(), name='info'),
+    path('list_orders.html', OrderView.as_view(), name='order'),
+    path('profile.html', ProfileView.as_view(), name='profile'),
+    path('login.html', ProfileView.as_view(), name='login'),
+    path('register.html', ProfileView.as_view(), name='register'),
     
 ]
 

@@ -47,3 +47,9 @@ class ProfileView(View):
         return render(request, 'profile.html')
     def post(self, request):
         pass
+
+class OrderView(View):
+    def get(self, request):
+        return render(request, 'order.html')
+    def post(self, request):
+        pass
