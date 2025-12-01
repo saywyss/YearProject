@@ -53,3 +53,4 @@ class OrderView(View):
         return render(request, 'order.html')
     def post(self, request):
         pass
+

@@ -1,0 +1,101 @@
+/* Контейнер страницы */
+.auth-page {
+  max-width: 420px;
+  margin: 60px auto;        /* отступ сверху и снизу */
+  padding: 0 20px;
+}
+
+/* Карточка */
+.auth-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 26px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  border: 1px solid #ececec;
+}
+
+/* Заголовки */
+.auth-title {
+  font-size: 22px;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.auth-subtitle {
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+/* Поля ввода */
+.form-group {
+  margin-bottom: 14px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 9px 11px;
+  border-radius: 10px;
+  border: 1px solid #cfcfcf;
+  background: #fafafa;
+  font: inherit;
+}
+
+.form-group input:focus {
+  border-color: #a595ff;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(165,149,255,0.25);
+}
+
+/* Кнопки */
+.btn-primary {
+  display: inline-block;
+  padding: 10px 16px;
+  background: #a595ff;
+  color: #fff;
+  border-radius: 999px;
+  text-decoration: none;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 6px;
+}
+
+.btn-primary:hover {
+  background: #8d7aff;
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 10px 16px;
+  background: #e2dfff;
+  color: #4b3dae;
+  border-radius: 999px;
+  border: none;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: 6px;
+}
+
+.btn-secondary:hover {
+  background: #d4ccff;
+}
+
+/* Ошибки */
+.form-errors,
+.field-errors {
+  background: #ffe5e5;
+  border: 1px solid #ffbcbc;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 13px;
+  color: #d40000;
+  margin-bottom: 12px;
+}
