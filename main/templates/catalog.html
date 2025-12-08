@@ -1,15 +1,8 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
 
-<html>
-    
-    <head>
-    <meta charset="UTF-8">
-    <title>Catalog Page</title>
-    </head>
+{% block title %}Catalog Page{% endblock %}
 
-    <body>
-    <h1>Catalog Page</h1>
-    <a href="{% url 'home_page' %}">Home</a>
-    </body>
-
-</html>
+{% block content %}
+    <h2>Catalog</h2>
+    <p>This is the catalog page.</p>
+{% endblock %}

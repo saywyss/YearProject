@@ -1,15 +1,8 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
 
-<html>
-    
-    <head>
-    <meta charset="UTF-8">
-    <title>Order Page</title>
-    </head>
+{% block title %}Order Page{% endblock %}
 
-    <body>
-    <h1>Order Page</h1>
-    <a href="{% url 'home_page' %}">Home</a>
-    </body>
-
-</html>
+{% block content %}
+    <h2>Order Details</h2>
+{% endblock %}

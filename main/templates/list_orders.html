@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}List of Orders{% endblock %}
+
+{% block content %}
+    <h2>All Orders</h2>
+
+    {% for orders in all orders %}
+        <div class="order-card">
+            <h3>{{ order.user }}</h3>
+            <p>Created_at: {{ order.created_at }}</p>
+            <p>Total_Price: {{ order.total_price }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}

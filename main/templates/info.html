@@ -1,15 +1,76 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
 
-<html>
-    
-    <head>
-    <meta charset="UTF-8">
-    <title>Info Page</title>
-    </head>
+{% block title %}Information Page{% endblock %}
 
-    <body>
-    <h1>Info Page</h1>
-    <a href="{% url 'home_page' %}">Home</a>
-    </body>
+{% block content %}
+    <main class="info-page">
 
-</html>
+        <section class="info-card">
+            <h1>About TDSHOP</h1>
+            <p class="info-lead">
+                TDSHOP is a demonstration online store where you can browse product prices,
+                add items to your cart, and complete an order in just a few simple steps.
+            </p>
+        </section>
+
+        <section class="info-card">
+            <h2>What You Can Do on This Website</h2>
+            <ul class="info-list">
+                <li>view the catalog of items with updated prices;</li>
+                <li>add products to your shopping cart;</li>
+                <li>place an order with your delivery information;</li>
+                <li>track the status of your orders in the <strong>Orders</strong> section;</li>
+                <li>create a personal account and manage your profile information.</li>
+            </ul>
+        </section>
+
+        <section class="info-card">
+            <h2>Payment Methods</h2>
+            <ul class="info-list">
+                <li>cash on delivery (pay when picking up the parcel);</li>
+                <li>online payment by credit or debit card (Visa / MasterCard);</li>
+                <li>prepayment via bank details (available upon request).</li>
+            </ul>
+            <p class="info-note">
+                The available payment method may vary depending on your location and the selected items.
+            </p>
+        </section>
+
+        <section class="info-card">
+            <h2>Shipping & Returns</h2>
+            <ul class="info-list">
+                <li>we deliver to your address or to the pickup point of your chosen delivery service;</li>
+                <li>delivery times depend on your region and the workload of the postal service;</li>
+                <li>if you receive a damaged product or an incorrect order, contact us within 14 days;</li>
+                <li>returns and exchanges are possible if the product is in its original condition and you have the receipt.</li>
+            </ul>
+        </section>
+
+        <section class="info-card">
+            <h2>Support & Error Reports</h2>
+            <p>
+                If you encounter an error on the website, see incorrect pricing,
+                cannot place an order, or have any questions — please contact our support email:
+            </p>
+
+            <p class="info-email">
+                <a href="mailto:saywysss@gmail.com">saywysss@gmail.com</a>
+            </p>
+
+            <p class="info-note">
+                When contacting support, please include your username (if you have one),
+                the order number, and a short description of the issue — this will help us resolve it faster.
+            </p>
+        </section>
+
+        <section class="info-card">
+            <h2>Important Notes</h2>
+            <ul class="info-list">
+                <li>product prices and availability may change over time;</li>
+                <li>any personal data you provide is used only for order processing;</li>
+                <li>do not share your account information with third parties for security reasons.</li>
+            </ul>
+        </section>
+
+    </main>
+{% endblock %}
