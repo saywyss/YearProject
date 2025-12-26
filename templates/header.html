@@ -9,6 +9,9 @@
         </div>
 
         <div class="nav-right">
+                <a href="{% url 'cart' %}" class="nav-link nav-outline">
+                    Cart
+                </a>
             {% if not request.user.is_authenticated %}
                 <a href="{% url 'login' %}" class="nav-link">Sign in</a>
                 <a href="{% url 'register' %}" class="nav-link">Create account</a>
@@ -17,5 +20,6 @@
                 <a href="{% url 'logout' %}" class="nav-link">Logout</a>
             {% endif %}
         </div>
+
     </nav>
 </header>

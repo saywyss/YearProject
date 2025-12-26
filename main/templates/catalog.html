@@ -1,8 +1,67 @@
 {% extends "base.html" %}
+{% load static %}
 
-{% block title %}Catalog Page{% endblock %}
+{% block title %}Catalog — TDSHOP{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'catalog.css' %}">
+{% endblock %}
 
 {% block content %}
-    <h2>Catalog</h2>
-    <p>This is the catalog page.</p>
+<main class="catalog-page">
+
+    <section class="catalog-header">
+        <div>
+            <h1 class="catalog-title">Catalog</h1>
+            <p class="catalog-subtitle">
+                Browse all available products in TDSHOP. You can check prices,
+                see categories and add items to your cart later.
+            </p>
+        </div>
+    </section>
+
+    {% if all_products %}
+        <section class="catalog-grid">
+            <div class="product-grid">
+                {% for product in all_products %}
+                
+                    <article class="product-card">
+                        <div class="product-body">
+                            <h2 class="product-title">{{ product.name }}</h2>
+
+                            <p class="product-category">
+                                Category: {{ product.category }}
+                            </p>
+
+                            <p class="product-description">
+                                {{ product.description }}
+                            </p>
+                        </div>
+
+                        <div class="product-footer">
+                            <div class="product-meta">
+                                <span class="product-price">{{ product.price }} ₴</span>
+                                <span class="product-stock">
+                                    In stock: {{ product.count }}
+                                </span>
+                            </div>
+
+                            <form method="post" action="{% url 'add_to_cart' product.id %}">
+                                {% csrf_token %}
+                                <button type="submit" class="product-btn">
+                                    Add to cart
+                                </button>
+                            </form>
+                        </div>
+                    </article>
+                {% endfor %}
+            </div>
+        </section>
+    {% else %}
+        <p class="catalog-empty">
+            There are no products in the catalog yet.
+        </p>
+    {% endif %}
+
+</main>
 {% endblock %}

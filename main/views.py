@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.views.generic import View
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.shortcuts import render, redirect, get_object_or_404
+from .models import Product
 
 from main.models import Product
 from main.models import Order
@@ -55,3 +57,37 @@ class OrderView(LoginRequiredMixin, View):
     def post(self, request):
         pass
 
+
+def add_to_cart(request, product_id):
+    product = get_object_or_404(Product, id=product_id)
+
+    cart = request.session.get('cart', {})
+
+    if str(product_id) in cart:
+        cart[str(product_id)]['quantity'] += 1
+    else:
+        cart[str(product.id)] = {
+            'name': product.name,
+            'price': str(product.price),
+            'quantity': cart.get(str(product.id), {}).get('quantity', 0) + 1
+        }
+
+
+    request.session['cart'] = cart
+    return redirect('catalog')
+
+
+def cart_view(request):
+    cart = request.session.get('cart', {})
+
+    total_price = sum(
+        float(item['price']) * item['quantity']
+        for item in cart.values()
+    )
+
+    context = {
+        'cart': cart,
+        'total_price': total_price,
+    }
+
+    return render(request, 'cart.html', context)

@@ -1,10 +1,46 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}Profile Page{% endblock %}
+{% block title %}Profile — TDSHOP{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'auth.css' %}">
+{% endblock %}
 
 {% block content %}
-    <h2>User Profile</h2>
-    <p>Username: {{ request.user.username }}</p>
-    <p>Email: {{ request.user.email }}</p>
+<main class="profile-page">
+    <section class="profile-card">
+        <h1 class="profile-title">User profile</h1>
+        <p class="profile-subtitle">
+            Here you can see your basic account information.
+        </p>
+
+        <div class="profile-row">
+            <span class="profile-label">Username:</span>
+            <span class="profile-value">{{ request.user.username }}</span>
+        </div>
+
+        <div class="profile-row">
+            <span class="profile-label">Email:</span>
+            <span class="profile-value">
+                {{ request.user.email|default:"Not specified" }}
+            </span>
+        </div>
+
+        <div class="profile-row">
+            <span class="profile-label">Status:</span>
+            <span class="profile-value">
+                {% if request.user.is_authenticated %}
+                    Logged in
+                {% else %}
+                    Guest
+                {% endif %}
+            </span>
+        </div>
+
+        <div class="profile-actions">
+            <a href="{% url 'logout' %}" class="btn-secondary">Log out</a>
+        </div>
+    </section>
+</main>
 {% endblock %}

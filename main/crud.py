@@ -59,3 +59,13 @@ def get_products_by_category(category):
 # .all() - получить ВСЕ
 # .filter(user=request.user) - получить ВСЕ заказы пользователя
 # .get(user=request.user) - получить 1 заказ пользователя
+
+
+#create-order
+def create_order(user, total_price):
+    order = models.Order(
+        user=user,
+        total_price=total_price
+    )
+    order.save()
+    return order

@@ -1,13 +1,47 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}Register Page{% endblock %}
+{% block title %}Register — TDSHOP{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'auth.css' %}">
+{% endblock %}
 
 {% block content %}
-    <h2>Register</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Register</button>
-    </form>
+<main class="auth-page">
+    <section class="auth-card">
+        <div class="auth-inner">
+            <h1 class="auth-title">Create account</h1>
+            <p class="auth-subtitle">
+                Register to save your orders and manage your profile.
+            </p>
+
+            <form method="post" class="auth-form">
+                {% csrf_token %}
+
+                <div class="form-group">
+                    {{ form.username.label_tag }}
+                    {{ form.username }}
+                </div>
+
+                <div class="form-group">
+                    {{ form.password1.label_tag }}
+                    {{ form.password1 }}
+                </div>
+
+                <div class="form-group">
+                    {{ form.password2.label_tag }}
+                    {{ form.password2 }}
+                </div>
+
+                <div class="auth-actions">
+                    <button type="submit" class="btn-primary">Sign up</button>
+                    <a href="{% url 'login' %}" class="btn-secondary">
+                        I already have an account
+                    </a>
+                </div>
+            </form>
+        </div>
+    </section>
+</main>
 {% endblock %}

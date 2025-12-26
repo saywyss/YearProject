@@ -1,8 +1,80 @@
 {% extends "base.html" %}
+{% load static %}
 
-{% block title %}Home Page{% endblock %}
+{% block title %}TDSHOP — Your online store{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+{% endblock %}
 
 {% block content %}
-    <h2>Home</h2>
-    <p>Welcome to the home page of TDSHOP.</p>
+<main class="home-page">
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-inner">
+            <h1 class="hero-title">Welcome to TDSHOP</h1>
+            <p class="hero-subtitle">
+                Your simple and elegant marketplace where you can browse items,
+                check prices, and place orders quickly and comfortably.
+            </p>
+            <a href="{% url 'catalog' %}" class="hero-btn">Browse catalog</a>
+        </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="categories">
+        <h2 class="section-title">Popular categories</h2>
+        <div class="category-grid">
+            <a href="{% url 'catalog' %}" class="category-card">Drinks</a>
+            <a href="{% url 'catalog' %}" class="category-card">Snacks</a>
+            <a href="{% url 'catalog' %}" class="category-card">Fruits</a>
+            <a href="{% url 'catalog' %}" class="category-card">Household</a>
+        </div>
+    </section>
+
+    <!-- POPULAR PRODUCTS -->
+    {% if popular_products %}
+    <section class="popular-products">
+        <h2 class="section-title">Popular products</h2>
+
+        <div class="product-grid">
+            {% for product in popular_products %}
+                <div class="product-card">
+                    <h3 class="product-name">{{ product.name }}</h3>
+                    <p class="product-price">{{ product.price }} ₴</p>
+                    <a href="{% url 'catalog' %}" class="product-btn">View</a>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+    {% endif %}
+
+    <!-- ADVANTAGES -->
+    <section class="advantages">
+        <h2 class="section-title">Why choose TDSHOP?</h2>
+        <div class="adv-grid">
+            <div class="adv-card">
+                <span class="adv-emoji">⚡</span>
+                <p>Fast delivery</p>
+            </div>
+
+            <div class="adv-card">
+                <span class="adv-emoji">📦</span>
+                <p>Secure packaging</p>
+            </div>
+
+            <div class="adv-card">
+                <span class="adv-emoji">🔒</span>
+                <p>Safe online payments</p>
+            </div>
+
+            <div class="adv-card">
+                <span class="adv-emoji">💬</span>
+                <p>Friendly support</p>
+            </div>
+        </div>
+    </section>
+
+</main>
 {% endblock %}

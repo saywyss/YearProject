@@ -1,0 +1,223 @@
+/* Обгортка для login / register */
+.auth-page {
+  display: flex;
+  justify-content: center;      /* по центру по ширині */
+  padding: 70px 16px 90px;      /* відступ зверху/знизу */
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Картка форми */
+.auth-card {
+  width: 100%;
+  max-width: 520px;             /* ширина "вікна" */
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 32px 28px 26px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.10);
+  border: 1px solid #f1f1f1;
+}
+
+/* Заголовок і підзаголовок */
+.auth-title {
+  font-size: 24px;
+  margin: 0 0 6px 0;
+  font-weight: 600;
+}
+
+.auth-subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0 0 22px 0;
+}
+
+/* Поля форми */
+.auth-form .form-group {
+  margin-bottom: 16px;
+}
+
+.auth-form label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 11px 12px;
+  border-radius: 10px;
+  border: 1px solid #d4d4d4;
+  background: #fafafa;
+  font: inherit;
+}
+
+.auth-form input:focus {
+  outline: none;
+  border-color: #a595ff;
+  box-shadow: 0 0 0 2px rgba(165,149,255,0.25);
+}
+
+/* Блок кнопок під формою */
+.auth-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+/* Кнопки */
+.btn-primary,
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* фіолетова кнопка Sign up / Sign in */
+.btn-primary {
+  background: #a595ff;
+  color: #ffffff;
+}
+.btn-primary:hover {
+  background: #8d7aff;
+}
+
+/* світла кнопка "I already have an account" */
+.btn-secondary {
+  background: #e5ddff;
+  color: #4b3dae;
+}
+.btn-secondary:hover {
+  background: #d7ccff;
+}
+
+/* Помилки */
+.form-errors,
+.field-errors {
+  margin-top: 6px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: #ffe5e5;
+  border: 1px solid #ffbcbc;
+  color: #b91c1c;
+  font-size: 12px;
+}
+
+/* Профіль у тому ж стилі */
+.profile-page {
+  display: flex;
+  justify-content: center;
+  padding: 70px 16px 90px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.profile-card {
+  width: 100%;
+  max-width: 520px;
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 32px 28px 26px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.10);
+  border: 1px solid #f1f1f1;
+}
+
+.profile-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 6px 0;
+}
+
+.profile-subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0 0 22px 0;
+}
+
+.profile-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.profile-label {
+  min-width: 90px;
+  color: #6b7280;
+}
+
+.profile-value {
+  font-weight: 500;
+}
+
+.profile-actions {
+  margin-top: 18px;
+}
+
+
+/* обгортка сторінки */
+.auth-page {
+  display: flex;
+  justify-content: center;
+  padding: 70px 16px 90px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* сама картка */
+.auth-card {
+  width: 100%;
+  max-width: 620px;              /* трошки ширша картка */
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 32px 0 26px;          /* без бокового падінгу */
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.10);
+  border: 1px solid #f1f1f1;
+}
+
+/* внутрішній контейнер – тут сидить заголовок, текст і форма */
+.auth-inner {
+  max-width: 430px;              /* реальна ширина контенту */
+  margin: 0 auto;                /* по центру всередині картки */
+}
+
+/* далі як було */
+.auth-title {
+  font-size: 24px;
+  margin: 0 0 6px 0;
+  font-weight: 600;
+}
+
+.auth-subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0 0 22px 0;
+}
+
+.auth-form .form-group {
+  margin-bottom: 16px;
+}
+
+.auth-form label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 11px 12px;
+  border-radius: 10px;
+  border: 1px solid #d4d4d4;
+  background: #fafafa;
+  font: inherit;
+  box-sizing: border-box;
+}
+
+
+
+
